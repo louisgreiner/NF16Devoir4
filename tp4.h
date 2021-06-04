@@ -28,9 +28,7 @@ int compterVaccins(T_ABR* abr, char* marque);
 
 void deduireVaccinL(T_ListeVaccins** listeVaccins, char* marque, int nb_vaccins);
 void deduireVaccinA(T_ABR** abr, char* marque, int nb_vaccins);
-T_ABR** plusPetiteDate(T_ABR** abr, char* date);
 void supprimerNoeud(T_ABR** abr, char* date);
-T_ABR** plusPetiteDateDroite(T_ABR* abr);
 int verifValidDate(char* date);
 
 
