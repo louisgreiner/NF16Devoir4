@@ -5,59 +5,12 @@
 #include <string.h>
 #include "tp4.h"
 
-// https://github.com/martinWANG2014?tab=repositories -> TutorielABR / TutorielListeChainee
-
 int main() {
 
 	T_ABR* abr = NULL;
 	int nb_vaccins;
 	char* marque = malloc(50 * sizeof(char));
 	char* date = malloc(10 * sizeof(char));
-
-	// insertion ordre chronologique croissante, pas de problème
-	//ajouterVaccinA(&abr, "2020-01-01", "Moderna", 34);
-	//ajouterVaccinA(&abr, "2020-01-01", "Pfizer", 127);
-
-	//ajouterVaccinA(&abr, "2020-01-02", "Pfizer", 10);
-	//ajouterVaccinA(&abr, "2020-01-02", "Moderna", 300);
-	//ajouterVaccinA(&abr, "2020-01-02", "Pfizer", 99);
-
-	//ajouterVaccinA(&abr, "2020-01-03", "Moderna", 34);
-
-	//ajouterVaccinA(&abr, "2020-01-06", "Pfizer", 127);
-
-	//ajouterVaccinA(&abr, "2020-01-10", "Pfizer", 10);
-
-	//ajouterVaccinA(&abr, "2020-01-15", "Astrazeneca", 4532);
-
-	//ajouterVaccinA(&abr, "2020-01-20", "Pfizer", 99);
-
-	//ajouterVaccinA(&abr, "2020-01-21", "Astrazeneca", 50);
-
-	//ajouterVaccinA(&abr, "2020-01-25", "Moderna", 142);
-
-
-	// insertion ordre chronologique décroissante, mène à une segmentation fault
-	ajouterVaccinA(&abr, "2020-01-25", "Moderna", 142);
-
-	ajouterVaccinA(&abr, "2020-01-21", "Astrazeneca", 50);
-
-	ajouterVaccinA(&abr, "2020-01-20", "Pfizer", 99);
-
-	ajouterVaccinA(&abr, "2020-01-15", "Astrazeneca", 4532);
-
-	ajouterVaccinA(&abr, "2020-01-10", "Pfizer", 10);
-
-	ajouterVaccinA(&abr, "2020-01-06", "Pfizer", 127);
-
-	ajouterVaccinA(&abr, "2020-01-03", "Moderna", 34);
-
-	ajouterVaccinA(&abr, "2020-01-02", "Pfizer", 10);
-	ajouterVaccinA(&abr, "2020-01-02", "Moderna", 300);
-	ajouterVaccinA(&abr, "2020-01-02", "Pfizer", 99);
-
-	ajouterVaccinA(&abr, "2020-01-01", "Moderna", 34);
-	ajouterVaccinA(&abr, "2020-01-01", "Pfizer", 127);
 
 	int choix = 0;
 	do {
@@ -76,7 +29,50 @@ int main() {
 		switch (choix) {
 		case '1':
 			printf("Choix 1\n");
-			printf("(L'initialisation manuelle n'est pas necessaire car les noeuds sont initialises dynamiquement, on peut passer directement par l'option 2. Ajout)\n");
+			ajouterVaccinA(&abr, "2020-01-10", "Pfizer", 50);
+			ajouterVaccinA(&abr, "2020-01-10", "Moderna", 10);
+			ajouterVaccinA(&abr, "2020-01-10", "Johnson&Johnson", 25);
+			ajouterVaccinA(&abr, "2020-01-10", "BioNTech", 30);
+			ajouterVaccinA(&abr, "2020-01-10", "Oxford", 25);
+
+			ajouterVaccinA(&abr, "2020-01-08", "Pfizer", 10);
+			ajouterVaccinA(&abr, "2020-01-08", "Moderna", 200);
+			ajouterVaccinA(&abr, "2020-01-08", "Johnson&Johnson", 75);
+			ajouterVaccinA(&abr, "2020-01-08", "Oxford", 84);
+
+			ajouterVaccinA(&abr, "2020-01-12", "Pfizer", 16);
+			ajouterVaccinA(&abr, "2020-01-12", "Johnson&Johnson", 95);
+			ajouterVaccinA(&abr, "2020-01-12", "BioNTech", 36);
+			ajouterVaccinA(&abr, "2020-01-12", "Oxford", 58);
+
+			ajouterVaccinA(&abr, "2020-01-14", "Pfizer", 70);
+			ajouterVaccinA(&abr, "2020-01-14", "Johnson&Johnson", 3);
+			ajouterVaccinA(&abr, "2020-01-14", "BioNTech", 45);
+
+			ajouterVaccinA(&abr, "2020-01-06", "Moderna", 65);
+			ajouterVaccinA(&abr, "2020-01-06", "Johnson&Johnson", 59);
+			ajouterVaccinA(&abr, "2020-01-06", "BioNTech", 30);
+			ajouterVaccinA(&abr, "2020-01-06", "Oxford", 45);
+
+			ajouterVaccinA(&abr, "2020-01-07", "Pfizer", 74);
+			ajouterVaccinA(&abr, "2020-01-07", "Moderna", 88);
+			ajouterVaccinA(&abr, "2020-01-07", "Johnson&Johnson", 62);
+			ajouterVaccinA(&abr, "2020-01-07", "BioNTech", 13);
+			ajouterVaccinA(&abr, "2020-01-07", "Oxford", 65);
+
+			ajouterVaccinA(&abr, "2020-01-09", "Pfizer", 22);
+			ajouterVaccinA(&abr, "2020-01-09", "Johnson&Johnson", 45);
+			ajouterVaccinA(&abr, "2020-01-09", "Oxford", 60);
+
+			ajouterVaccinA(&abr, "2020-01-11", "Pfizer", 41);
+			ajouterVaccinA(&abr, "2020-01-11", "Moderna", 28);
+			ajouterVaccinA(&abr, "2020-01-11", "Johnson&Johnson", 19);
+			ajouterVaccinA(&abr, "2020-01-11", "Oxford", 32);
+
+			ajouterVaccinA(&abr, "2020-01-16", "Pfizer", 70);
+			ajouterVaccinA(&abr, "2020-01-16", "Moderna", 165);
+			ajouterVaccinA(&abr, "2020-01-16", "Johnson&Johnson", 32);
+			ajouterVaccinA(&abr, "2020-01-16", "BioNTech", 110);
 			break;
 		case '2':
 			printf("Choix 2\n");
@@ -130,7 +126,7 @@ int main() {
 					printf("Erreur : aucun vaccin de marque %s n'est present dans la base de donnees\n",marque);
 				}else if (nb_total < nb_vaccins) {
 					//NB SOUSTRAIT SUPERIEUR A QTE
-					printf("Attention : le nombre de vaccins de marque %s est strictement inferieur au montant a supprimer.\nSouhaitez-vous quand même effectuer la modification? (y/n)\n", marque);
+					printf("Attention : le nombre de vaccins de marque %s est strictement inferieur au montant a supprimer.\nSouhaitez-vous quand mme effectuer la modification? (y/n)\n", marque);
 					char validation;
 					scanf("%c", &validation);
 					if (validation == 'y' || validation == 'Y') {
@@ -155,6 +151,15 @@ int main() {
 
 
 	} while (choix != '7');
+
+	//TODO : optimiser parcours suppression (parcours postfixe ou je sais plus trop)
+	while (abr != NULL) {
+		printf("-------- Reste a liberer la memoire de l'arbre suivant: --------");
+		afficherStockAArbre(abr, 0);
+		supprimerNoeud(&abr, abr->date);
+	}
+
+	printf("Arbre vide, sortie du programme...\n");
 
 	return 0;
 }
